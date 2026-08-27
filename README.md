@@ -24,3 +24,6 @@ Required Vercel Environment Variables:
 When `zfxhad` is live on Twitch, the site switches the media panel from the latest YouTube video to the Twitch player. When the stream ends, it returns to the latest YouTube video automatically.
 
 After adding or changing Environment Variables in Vercel, redeploy the Production deployment.
+
+
+v17: fixed Twitch embed sizing so the live player fills the same 16:9 media card as YouTube. Offline fallback to latest YouTube remains unchanged.

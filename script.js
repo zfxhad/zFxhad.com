@@ -99,7 +99,8 @@ function showLiveMode(stream){
   if(heading) heading.textContent=arabic?'مباشر الآن.':'Live now.';
   if(description) description.textContent=stream?.title || (arabic?'أنا مباشر الآن على تويتش.':'I’m live on Twitch right now.');
   if(button){button.href='https://twitch.tv/zfxhad';button.textContent=arabic?'شاهد على تويتش ↗':'Watch on Twitch ↗';}
-  media?.classList.remove('youtube-embed');
+  // Keep the media container in embed mode so Twitch fills the full 16:9 frame.
+  media?.classList.add('youtube-embed');
 
   if(frame){
     const parent=encodeURIComponent(window.location.hostname || 'zfxhad.com');
