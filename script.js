@@ -48,4 +48,82 @@ async function loadLatestYouTubeVideo(){
     console.warn('Could not auto-load latest YouTube video; using fallback embed.',err);
   }
 }
-loadLatestYouTubeVideo();
+
+// Twitch live status: switch the single media screen between Twitch and latest YouTube.
+let liveMode = false;
+let latestYouTubeLoaded = false;
+
+function setStatusText(text){
+  const el=document.querySelector('.status span:last-child');
+  if(el) el.textContent=text;
+}
+
+async function showOfflineMode(){
+  if(!liveMode && latestYouTubeLoaded) return;
+  liveMode=false;
+  const status=document.querySelector('.status');
+  const heading=document.querySelector('.live-copy h2');
+  const description=document.querySelector('.live-copy p');
+  const button=document.querySelector('.outline-btn');
+  const frame=document.getElementById('latestYouTubeFrame');
+  const media=document.getElementById('mediaPlayer');
+
+  status?.classList.remove('live');
+  status?.classList.add('offline');
+  setStatusText(arabic?'غير مباشر':'OFFLINE');
+  if(heading) heading.textContent=arabic?'آخر فيديو.':'Latest Video.';
+  if(description) description.textContent=arabic?'عندما أكون مباشرًا، يتحول هذا القسم إلى البث تلقائيًا.':"When I’m live, this switches to the stream automatically.";
+  if(button){button.href='https://youtube.com/zfxhad';button.textContent=arabic?'افتح يوتيوب ↗':'Open YouTube ↗';}
+  media?.classList.add('youtube-embed');
+  if(frame){
+    frame.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    frame.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+  }
+  await loadLatestYouTubeVideo();
+  latestYouTubeLoaded=true;
+}
+
+function showLiveMode(stream){
+  liveMode=true;
+  latestYouTubeLoaded=false;
+  const status=document.querySelector('.status');
+  const heading=document.querySelector('.live-copy h2');
+  const description=document.querySelector('.live-copy p');
+  const button=document.querySelector('.outline-btn');
+  const frame=document.getElementById('latestYouTubeFrame');
+  const media=document.getElementById('mediaPlayer');
+
+  status?.classList.remove('offline');
+  status?.classList.add('live');
+  setStatusText(arabic?'مباشر الآن':'LIVE NOW');
+  if(heading) heading.textContent=arabic?'مباشر الآن.':'Live now.';
+  if(description) description.textContent=stream?.title || (arabic?'أنا مباشر الآن على تويتش.':'I’m live on Twitch right now.');
+  if(button){button.href='https://twitch.tv/zfxhad';button.textContent=arabic?'شاهد على تويتش ↗':'Watch on Twitch ↗';}
+  media?.classList.remove('youtube-embed');
+
+  if(frame){
+    const parent=encodeURIComponent(window.location.hostname || 'zfxhad.com');
+    const twitchSrc=`https://player.twitch.tv/?channel=zfxhad&parent=${parent}&muted=true&autoplay=false`;
+    if(frame.src!==twitchSrc) frame.src=twitchSrc;
+    frame.title=stream?.title?`zfxhad live — ${stream.title}`:'zfxhad live on Twitch';
+    frame.setAttribute('allow','autoplay; fullscreen');
+    frame.removeAttribute('referrerpolicy');
+  }
+}
+
+async function checkTwitchStatus(){
+  try{
+    const response=await fetch('/api/twitch-status',{cache:'no-store'});
+    if(!response.ok) throw new Error(`Twitch status endpoint returned ${response.status}`);
+    const stream=await response.json();
+    if(stream.live) showLiveMode(stream);
+    else await showOfflineMode();
+  }catch(err){
+    console.warn('Could not check Twitch status; showing latest YouTube video.',err);
+    await showOfflineMode();
+  }
+}
+
+checkTwitchStatus();
+setInterval(checkTwitchStatus,60_000);
+
