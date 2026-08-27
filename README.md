@@ -36,3 +36,8 @@ v17: fixed Twitch embed sizing so the live player fills the same 16:9 media card
 4. Commit the changes to GitHub; Vercel will redeploy automatically.
 
 The first downloadable tweak is `downloads/Fahad_Touch.zip` and is kept unchanged from the uploaded file.
+
+
+## v19
+- Things I use now includes Rufus, MSI Afterburner, OCCT, UNIGINE Benchmarks, CapFrameX, HWiNFO, and GPU-Z.
+- Replaced `downloads/Fahad_Touch.zip` with the newly uploaded EXE-based Fahad Touch package.
