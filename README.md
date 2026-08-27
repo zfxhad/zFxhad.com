@@ -27,3 +27,12 @@ After adding or changing Environment Variables in Vercel, redeploy the Productio
 
 
 v17: fixed Twitch embed sizing so the live player fills the same 16:9 media card as YouTube. Offline fallback to latest YouTube remains unchanged.
+
+
+## Adding another tweak later
+1. Put the downloadable ZIP inside `downloads/`.
+2. Put its transparent PNG logo inside `assets/`.
+3. Add one object to `data/tweaks.json` using the existing Fahad Touch entry as the template.
+4. Commit the changes to GitHub; Vercel will redeploy automatically.
+
+The first downloadable tweak is `downloads/Fahad_Touch.zip` and is kept unchanged from the uploaded file.
