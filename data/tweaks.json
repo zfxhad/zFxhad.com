@@ -3,14 +3,18 @@
     "name": "Fahad Touch",
     "nameAr": "Fahad Touch",
     "version": "1.0",
-    "description": "Interactive, reversible Windows tweak manager with backups, restore options, system detection, and safety checks.",
-    "descriptionAr": "مدير تويكات تفاعلي وقابل للاسترجاع لويندوز، مع نسخ احتياطية وخيارات استعادة وفحص للنظام وإجراءات أمان.",
+    "description": "Better performance. Smoother gameplay.",
+    "descriptionAr": "Better performance. Smoother gameplay.",
     "platform": "Windows",
     "platformAr": "ويندوز",
     "admin": true,
     "restart": "Only when needed",
     "restartAr": "عند الحاجة فقط",
     "file": "downloads/Fahad_Touch.zip",
-    "logo": "assets/fahad-touch-logo.png"
+    "logo": "assets/fahad-touch-logo.png",
+    "headline": "Up to +37% FPS",
+    "headlineAr": "Up to +37% FPS",
+    "tagline": "Better performance. Smoother gameplay.",
+    "taglineAr": "Better performance. Smoother gameplay."
   }
 ]

@@ -42,6 +42,8 @@ window.renderTweaks=function(){
   grid.innerHTML=tweakItems.map(t=>{
     const name=arabic?(t.nameAr||t.name):t.name;
     const desc=arabic?(t.descriptionAr||t.description):t.description;
+    const headline=arabic?(t.headlineAr||t.headline):t.headline;
+    const tagline=arabic?(t.taglineAr||t.tagline):t.tagline;
     const platform=arabic?(t.platformAr||t.platform):t.platform;
     const restart=arabic?(t.restartAr||t.restart):t.restart;
     const admin=arabic?'صلاحية مسؤول':'Admin required';
@@ -51,7 +53,8 @@ window.renderTweaks=function(){
       <div class="tweak-logo-wrap"><img class="tweak-logo" src="${t.logo}" alt="${name} logo"></div>
       <div class="tweak-content">
         <div class="tweak-topline"><h3>${name}</h3><span class="tweak-version">v${t.version||'1.0'}</span></div>
-        <p class="tweak-description">${desc}</p>
+        ${headline?`<p class="tweak-performance">${headline}</p>`:''}
+        <p class="tweak-description">${tagline||desc}</p>
         <div class="tweak-meta"><span>${platform}</span>${t.admin?`<span>${admin}</span>`:''}<span>${restartLabel}</span></div>
         <a class="tweak-download" href="${t.file}" download>${download}</a>
       </div>

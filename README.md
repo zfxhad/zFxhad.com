@@ -41,3 +41,10 @@ The first downloadable tweak is `downloads/Fahad_Touch.zip` and is kept unchange
 ## v19
 - Things I use now includes Rufus, MSI Afterburner, OCCT, UNIGINE Benchmarks, CapFrameX, HWiNFO, and GPU-Z.
 - Replaced `downloads/Fahad_Touch.zip` with the newly uploaded EXE-based Fahad Touch package.
+
+
+## v20
+- Replaced Fahad Touch download with the latest build.
+- Clean download filename: `Fahad_Touch.zip`.
+- Added “Up to +37% FPS” and “Better performance. Smoother gameplay.” to the tweak card.
+- Expanded Tools layout to 4 columns on wide screens with responsive 3/2/1-column breakpoints.
