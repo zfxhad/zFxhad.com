@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="description" content="Fahad's personal tech hub — streams, tools and setups." />
+  <title>Fahad — zfxhad</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="texture" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand-stack">
+      <button class="avatar-btn" id="menuButton" aria-label="Open menu" aria-expanded="false"><img src="assets/avatar.png" alt="Fahad pixel avatar" /></button>
+      <button class="hamburger" id="menuButton2" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="top-actions">
+      <a class="social-icon" href="https://x.com/zfxhad" target="_blank" rel="noreferrer" aria-label="X"><img src="https://cdn.simpleicons.org/x/ECE6DC" alt=""/></a>
+      <span class="divider"></span>
+      <a class="coffee top-coffee" href="https://rabt.store/zfxhad" target="_blank" rel="noreferrer">☕ <span>Buy me a coffee</span></a>
+      <span class="divider"></span>
+      <button class="search-trigger" id="searchTrigger" aria-label="Search"><span class="magnifier">⌕</span><span>Search</span><kbd>Ctrl K</kbd></button>
+      <span class="divider"></span>
+      <button class="lang" id="langToggle"><span class="ar">AR</span> / <span class="en active">EN</span></button>
+    </div>
+  </header>
+
+  <aside class="side-menu" id="sideMenu" aria-hidden="true">
+    <button class="menu-close" id="menuClose" aria-label="Close menu">×</button>
+    <nav>
+      <a href="#intro"><span>01</span><b>Intro</b></a>
+      <a href="#live"><span>02</span><b>Live / Video</b></a>
+      <a href="#tools" class="tools-menu-link"><span>03</span><b>Tools</b></a>
+      <div class="tools-submenu" aria-label="Tools categories">
+        <a href="#tools"><span>—</span><b>Things I use</b></a>
+        <a href="#tools"><span>—</span><b>Tweaks I developed</b></a>
+      </div>
+      <a href="#setup"><span>04</span><b>Setup</b></a>
+      <a href="#connect"><span>05</span><b>Connect</b></a>
+    </nav>
+    <div class="menu-socials">
+      <a href="https://twitch.tv/zfxhad" target="_blank">Twitch</a>
+      <a href="https://kick.com/zfxhad" target="_blank">Kick</a>
+      <a href="https://youtube.com/zfxhad" target="_blank">YouTube</a>
+      <a href="https://instagram.com/zfxhad_" target="_blank">Instagram</a>
+      <a href="https://t.me/zfxhad" target="_blank">Telegram</a>
+      <a href="https://reddit.com/user/zfxhad" target="_blank">Reddit</a>
+    </div>
+  </aside>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <div class="rail" aria-hidden="true">
+    <span class="rail-index">01</span>
+    <b class="rail-label">INTRO</b>
+  </div>
+
+  <main>
+    <section class="scene intro" id="intro">
+      <div class="intro-copy reveal">
+        <p class="eyebrow">Hey, I’m</p>
+        <h1>Fahad.</h1>
+        <p class="tagline">I break things. I tweak things.</p>
+        <a class="scroll-orbit" href="#live" aria-label="Scroll down"><span>SCROLL · SCROLL ·</span><b>⌄</b></a>
+      </div>
+    </section>
+
+    <section class="scene live-scene" id="live">
+      <div class="live-copy reveal">
+        <div class="status offline"><span class="status-dot"></span><span>OFFLINE</span></div>
+        <h2>Latest Video.</h2>
+        <p>When I’m live, this switches to the stream automatically.</p>
+        <a class="outline-btn" href="https://youtu.be/gYeTPPYReHE" target="_blank" rel="noreferrer">Open YouTube ↗</a>
+      </div>
+      <div class="media-wrap reveal delay-1">
+        <div class="video-placeholder youtube-embed" aria-label="Latest YouTube videos">
+          <iframe id="latestYouTubeFrame" src="https://www.youtube-nocookie.com/embed/gYeTPPYReHE?rel=0&playsinline=1" title="Latest video from zfxhad" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="platforms">
+          <a href="https://twitch.tv/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/twitch/EEE9DF" alt="Twitch"/>Twitch</a>
+          <a href="https://kick.com/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/kick/EEE9DF" alt="Kick"/>Kick</a>
+          <a href="https://youtube.com/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/youtube/EEE9DF" alt="YouTube"/>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene tools-scene" id="tools">
+      <div class="section-head reveal"><span>TOOLS</span><h2>Things I use.</h2></div>
+      <div class="tools-grid">
+        <article class="tool-card reveal"><img class="tool-logo rufus-logo" src="https://raw.githubusercontent.com/pbatard/rufus/master/res/icons/rufus-512.png" alt="Rufus"/><div><h3>Rufus</h3><p>Create bootable USB drives quickly and easily.</p><a href="https://rufus.ie" target="_blank">Visit →</a></div></article>
+        <article class="tool-card reveal delay-1"><img class="tool-logo msi-logo" src="https://img.icons8.com/fluent/1200/msi-afterburner.jpg" alt="MSI Afterburner"/><div><h3>MSI Afterburner</h3><p>GPU tuning, monitoring and fan control.</p><a href="https://www.msi.com/Landing/afterburner/graphics-cards" target="_blank">Visit →</a></div></article>
+        <article class="tool-card reveal delay-2"><img class="tool-logo occt-logo" src="https://www.techspot.com/images2/downloads/topdownload/2024/07/2024-07-09-ts3_thumbs-536.png" alt="OCCT"/><div><h3>OCCT</h3><p>Stress testing for CPU, GPU and power stability.</p><a href="https://www.ocbase.com/" target="_blank">Visit →</a></div></article>
+      </div>
+    </section>
+
+    <section class="scene setup-scene" id="setup">
+      <div class="section-head reveal"><span>SETUP</span><h2>My setup.</h2><p class="setup-subtitle">My machines, doing questionable things.</p></div>
+      <div class="setup-grid">
+        <article class="setup-card reveal">
+          <div class="machine-image"><img src="assets/gaming-pc.png" alt="Gaming PC"/></div>
+          <div class="specs"><h3>Gaming PC</h3><p><b>CPU</b> Intel Core i9-13900KS</p><p><b>GPU</b> NVIDIA GeForce RTX 4090 — MSI SUPRIM</p><p><b>RAM</b> 64GB</p><p><b>Motherboard</b> ASUS ROG STRIX Z790-E GAMING WIFI</p><p><b>OS</b> Windows 11 Pro</p></div>
+        </article>
+        <article class="setup-card reveal delay-1">
+          <div class="machine-image"><img src="assets/streaming-pc.png" alt="Streaming PC"/></div>
+          <div class="specs"><h3>Streaming PC</h3><p><b>CPU</b> AMD Ryzen 9 7950X</p><p><b>GPU</b> NVIDIA GeForce RTX 4080 — MSI</p><p><b>RAM</b> 64GB</p><p><b>Motherboard</b> ASUS ProArt X670E-CREATOR WIFI</p><p><b>OS</b> Windows 11 Pro</p></div>
+        </article>
+        <article class="setup-card reveal delay-2">
+          <div class="machine-image mac-image"><img src="assets/mac-mini-v7.png" alt="Mac mini"/></div>
+          <div class="specs"><h3>AI Home</h3><p><b>Device</b> Apple Mac mini (2023)</p><p><b>Chip</b> Apple M2 Pro</p><p><b>RAM</b> 16GB Unified Memory</p><p><b>Storage</b> 512GB SSD</p></div>
+        </article>
+        <article class="setup-card reveal delay-3">
+          <div class="machine-image"><img src="assets/printing-pc.png" alt="3D Printing PC"/></div>
+          <div class="specs"><h3>3D Printing PC</h3><p><b>CPU</b> Intel Core i5-9400F</p><p><b>GPU</b> NVIDIA GeForce RTX 2080 Ti — MSI</p><p><b>RAM</b> 16GB</p></div>
+        </article>
+        <article class="setup-card reveal delay-4 project-card">
+          <div class="machine-image project-image"><img src="assets/project-z.png" alt="Project Z"/><span class="outside-question">?</span></div>
+          <div class="specs"><h3>Project Z <em>In development</em></h3><p><b>CPU</b> AMD Ryzen 9 7950X</p><p><b>GPU</b> Unknown</p><p><b>RAM</b> Unknown</p><p><b>Motherboard</b> Unknown</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="connect">
+    <div class="footer-inner">
+      <div class="connect-side reveal">
+        <span class="section-kicker">CONNECT</span><h2>Let’s connect.</h2>
+        <div class="footer-socials">
+          <a href="https://x.com/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/x/ECE6DC" alt="X"/></a>
+          <a href="https://twitch.tv/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/twitch/ECE6DC" alt="Twitch"/></a>
+          <a href="https://kick.com/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/kick/ECE6DC" alt="Kick"/></a>
+          <a href="https://youtube.com/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/youtube/ECE6DC" alt="YouTube"/></a>
+          <a href="https://instagram.com/zfxhad_" target="_blank"><img src="https://cdn.simpleicons.org/instagram/ECE6DC" alt="Instagram"/></a>
+          <a href="https://reddit.com/user/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/reddit/ECE6DC" alt="Reddit"/></a>
+          <a href="https://t.me/zfxhad" target="_blank"><img src="https://cdn.simpleicons.org/telegram/ECE6DC" alt="Telegram"/></a>
+        </div>
+      </div>
+      <a class="coffee-card reveal delay-1" href="https://rabt.store/zfxhad" target="_blank"><span class="cup">☕</span><span><b>Buy me a coffee</b><small>Fuel my next bad idea.</small></span><strong>→</strong></a>
+    </div>
+    <p class="copyright">© <span id="year"></span> zfxhad. All rights reserved.</p>
+  </footer>
+
+  <dialog class="search-dialog" id="searchDialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+    <div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search tools, setup, projects…" autocomplete="off" /></div>
+    <div id="searchResults" class="search-results"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
